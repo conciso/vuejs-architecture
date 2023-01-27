@@ -3,13 +3,20 @@ import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
+  <header class="container-fluid">
     <nav>
-      <RouterLink to="/">Home</RouterLink>
+      <ul>
+        <li><strong>Hotel Manager 1000</strong></li>
+        <li><RouterLink to="/">Home</RouterLink></li>
+      </ul>
     </nav>
   </header>
 
-  <RouterView />
+  <main class="container-fluid">
+    <Suspense>
+      <RouterView />
+    </Suspense>
+  </main>
 </template>
 
 <style scoped></style>

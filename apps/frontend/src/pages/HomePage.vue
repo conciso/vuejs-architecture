@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import HotelList from "../components/HotelList.vue";
 
-const notUsed = "";
+const hotels = await (await fetch("http://localhost:3000/hotels")).json();
 </script>
 
 <template>
   <main>
-    <HotelList />
+    <HotelList :hotels="hotels" />
   </main>
 </template>

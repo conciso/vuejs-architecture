@@ -1,4 +1,5 @@
 import * as fs from "node:fs/promises";
+import cors from "cors";
 import express from "express";
 
 const packageJson = JSON.parse(await fs.readFile("./package.json", "utf-8"));
@@ -7,6 +8,7 @@ const APP_NAME = packageJson.name;
 const PORT = 3000;
 
 const app = express();
+app.use(cors());
 
 const hotels = ["City Centre", "Messe", "Westend"];
 
