@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import type { Hotel } from "hotel-management-shared";
+// import type { Hotel } from "hotel-management-shared";
+
+import type { BackendHotel } from "../../../backend/dist/main.js";
 
 const props = defineProps<{
-  hotels: Hotel[];
+  hotels: BackendHotel[];
 }>();
 </script>
 

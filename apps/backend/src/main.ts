@@ -11,10 +11,14 @@ const PORT = 3000;
 const app = express();
 app.use(cors());
 
-const hotels: Hotel[] = [
-  { id: 1, name: "City Centre" },
-  { id: 2, name: "Messe" },
-  { id: 3, name: "Westend" },
+export type BackendHotel = Hotel & {
+  updateCount: number;
+};
+
+const hotels: BackendHotel[] = [
+  { id: 1, name: "City Centre", updateCount: 0 },
+  { id: 2, name: "Messe", updateCount: 0 },
+  { id: 3, name: "Westend", updateCount: 0 },
 ];
 
 app.get("/hotels", (request, response) => {
