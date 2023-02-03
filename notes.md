@@ -6,3 +6,4 @@
   - `yarn`
 
 - tsconfig.json in root directory.
+  - `composite: true` to speed up compilation times.
