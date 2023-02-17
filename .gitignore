@@ -4,6 +4,9 @@
 !.yarn/plugins
 .pnp.*
 
+# rollup
+.rollup.cache
+
 # Logs
 logs
 *.log

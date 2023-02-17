@@ -3,6 +3,9 @@
     "composite": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "target": "ES2020",
+    "module": "ES2020",
+    "moduleResolution": "node"
   }
 }

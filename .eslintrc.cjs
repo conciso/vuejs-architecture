@@ -33,12 +33,12 @@ module.exports = {
           {
             target: "apps/backend/",
             from: "apps/frontend/",
-            message: "Backend should not import from frontend. Use hotel-management-shared instead.",
+            message: "Backend should not import from frontend. Move code to libs and import from there instead.",
           },
           {
             target: "apps/frontend/",
             from: "apps/backend/",
-            message: "Frontend should not import from backend. Use hotel-management-shared instead.",
+            message: "Frontend should not import from backend. Move code to libs and import from there instead.",
           },
         ],
       },

@@ -1,10 +1,9 @@
 {
-  "extends": "../../tsconfig.json",
-  "files": [],
+  "extends": "../../../tsconfig.json",
   "references": [
     { "path": "./tsconfig.config.json" },
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.vitest.json" },
-    { "path": "../../libs/shared/tsconfig.json" }
+    { "path": "../../../libs/shared/tsconfig.json" }
   ]
 }

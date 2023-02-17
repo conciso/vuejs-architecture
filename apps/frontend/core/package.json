@@ -1,0 +1,21 @@
+{
+  "name": "hotel-management-frontend-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "run -T vite",
+    "build": "run -T run-p type-check build-only",
+    "clean": "run -T rimraf ./dist",
+    "preview": "run -T vite preview",
+    "test:unit": "run -T vitest --environment jsdom --root src/",
+    "test:e2e": "run -T playwright test",
+    "build-only": "run -T vite build",
+    "type-check": "run -T vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "lint": "run -T eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "hotel-management-frontend-rooms": "workspace:apps/frontend/rooms",
+    "hotel-management-shared": "workspace:libs/shared"
+  }
+}
