@@ -3,9 +3,6 @@ import { fileURLToPath, URL } from "node:url";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import typescript from "@rollup/plugin-typescript";
-
-const resolvePath = (str: string) => resolve(__dirname, str);
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -27,16 +24,6 @@ export default defineConfig({
           vue: "Vue",
         },
       },
-      plugins: [
-        typescript({
-          rootDir: resolvePath("./src"),
-          declaration: true,
-          emitDeclarationOnly: true,
-          declarationDir: resolvePath("./dist"),
-          exclude: resolvePath("./node_modules/**"),
-          allowSyntheticDefaultImports: true,
-        }),
-      ],
     },
   },
   plugins: [vue()],

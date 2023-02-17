@@ -15,13 +15,14 @@
   },
   "scripts": {
     "dev": "run -T vite",
-    "build": "run -T run-p type-check build-only",
+    "build": "run -T run-p type-check build-only type-gen",
     "clean": "run -T rimraf ./dist",
     "preview": "run -T vite preview",
     "test:unit": "run -T vitest --environment jsdom --root src/",
     "test:e2e": "run -T playwright test",
     "build-only": "run -T vite build",
     "type-check": "run -T vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "type-gen": "run -T vue-tsc -p ./tsconfig.app.json --declaration --emitDeclarationOnly --rootDir ./src --outDir ./dist",
     "lint": "run -T eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
