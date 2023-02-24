@@ -1,6 +1,7 @@
+import type { RouteRecordRaw } from "vue-router";
 import RoomsPage from "./pages/RoomsPage.vue";
 
-export const routes = [
+export const routes: RouteRecordRaw[] = [
   {
     path: "/rooms",
     name: "rooms",

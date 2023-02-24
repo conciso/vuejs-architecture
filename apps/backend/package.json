@@ -5,11 +5,11 @@
   "type": "module",
   "packageManager": "yarn@3.3.1",
   "scripts": {
-    "build": "tsc",
-    "clean": "rimraf ./dist",
-    "dev": "run-p dev:tsc dev:node",
+    "build": "run -T tsc",
+    "clean": "run -T rimraf ./dist",
+    "dev": "run -T run-p dev:tsc dev:node",
     "dev:node": "node --watch ./dist/main.js",
-    "dev:tsc": "tsc --watch --preserveWatchOutput"
+    "dev:tsc": "run -T tsc --watch --preserveWatchOutput"
   },
   "dependencies": {
     "@picocss/pico": "1.5.6",

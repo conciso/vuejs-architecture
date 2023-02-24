@@ -14,7 +14,7 @@
     }
   },
   "scripts": {
-    "dev": "run -T vite",
+    "//dev": "run -T vite",
     "build": "run -T run-p type-check build-only type-gen",
     "clean": "run -T rimraf ./dist",
     "preview": "run -T vite preview",
