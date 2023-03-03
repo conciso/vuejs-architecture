@@ -1,6 +1,4 @@
 <script setup lang="ts">
-// import type { Hotel } from "hotel-management-shared";
-
 import type { Hotel } from "hotel-management-shared";
 
 const props = defineProps<{
