@@ -9,6 +9,7 @@
     "apps/frontend/core",
     "apps/frontend/rooms",
     "apps/backend",
+    "libs/auth",
     "libs/shared"
   ],
   "scripts": {
@@ -18,7 +19,7 @@
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "prettier": "prettier -c .",
-    "prettier:fix": "yarn prettier -w"
+    "prettier:fix": "prettier -w"
   },
   "dependencies": {
     "pinia": "2.0.28",

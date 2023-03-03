@@ -2894,7 +2894,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "hotel-management-frontend-core@workspace:apps/frontend/core"
   dependencies:
-    hotel-management-frontend-rooms: "workspace:apps/frontend/rooms"
     hotel-management-shared: "workspace:libs/shared"
   languageName: unknown
   linkType: soft
