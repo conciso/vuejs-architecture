@@ -7,20 +7,14 @@ import "./assets/main.scss";
 
 const routes: RouteRecordRaw[] = [];
 
-function registerModule(module: { routes?: RouteRecordRaw[] }): void {
-  if (module.routes) {
-    routes.push(...module.routes);
-  }
-}
+import { routes as coreRoutes } from "hotel-management-frontend-core";
+routes.push(...coreRoutes);
 
-import Core from "hotel-management-frontend-core";
-registerModule(Core);
+import { routes as luggageRoutes } from "hotel-management-frontend-luggage";
+routes.push(...luggageRoutes);
 
-import Luggage from "hotel-management-frontend-luggage";
-registerModule(Luggage);
-
-import Rooms from "hotel-management-frontend-rooms";
-registerModule(Rooms);
+import { routes as roomsRoutes } from "hotel-management-frontend-rooms";
+routes.push(...roomsRoutes);
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

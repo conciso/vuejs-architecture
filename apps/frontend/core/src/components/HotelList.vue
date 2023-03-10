@@ -8,6 +8,8 @@ const props = defineProps<{
 
 <template>
   <ul>
-    <li v-for="hotel of props.hotels" :key="hotel.id">{{ hotel.name }}</li>
+    <li v-for="hotel of props.hotels" :key="hotel.id">
+      <slot name="hotel" v-bind="hotel">{{ hotel.name }}</slot>
+    </li>
   </ul>
 </template>
