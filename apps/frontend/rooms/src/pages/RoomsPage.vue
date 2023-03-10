@@ -22,7 +22,7 @@ loading.value = false;
 <template>
   <div class="rooms" :aria-busy="loading">
     <HotelList :hotels="hotels">
-      <template #hotel="hotel">
+      <template #hotel="{ hotel }">
         <li class="hotel">
           <h3 class="hotel-name">{{ hotel.name }}</h3>
           <ul>

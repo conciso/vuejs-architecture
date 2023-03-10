@@ -1,4 +1,4 @@
-import { Hotel } from "./Hotel";
+import type { Hotel } from "./Hotel";
 
 export type Room = {
   hotelId: Hotel["id"];
