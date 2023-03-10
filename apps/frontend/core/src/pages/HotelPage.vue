@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import HotelList from "../components/HotelList.vue";
+import { useHotelsStore } from '../stores/hotels.js';
 
-const hotels = await (await fetch("http://localhost:3000/hotels")).json();
+const { fetchHotels } = useHotelsStore();
+const hotels = ref(await fetchHotels());
 </script>
 
 <template>
