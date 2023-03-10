@@ -12,6 +12,14 @@ function registerModule(name: string, module: { routes?: RouteRecordRaw[] }): vo
   }
 }
 
+import Core from "../../core/src/lib.js";
+import "../../core/src/assets/main.scss";
+registerModule("hotel-management-frontend-core", Core);
+
+import Luggage from "../../luggage/src/lib.js";
+import "../../luggage/src/assets/main.scss";
+registerModule("hotel-management-frontend-luggage", Luggage);
+
 import Rooms from "../../rooms/src/lib.js";
 import "../../rooms/src/assets/main.scss";
 registerModule("hotel-management-frontend-rooms", Rooms);
@@ -21,9 +29,10 @@ const router = createRouter({
   routes,
 });
 
-const app = createApp(App);
+const store = createPinia();
 
-app.use(createPinia());
+const app = createApp(App);
+app.use(store);
 app.use(router);
 
 app.mount("#app");

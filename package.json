@@ -6,9 +6,11 @@
   "private": true,
   "packageManager": "yarn@3.3.1",
   "workspaces": [
-    "apps/frontend/core",
-    "apps/frontend/rooms",
     "apps/backend",
+    "apps/frontend/core",
+    "apps/frontend/luggage",
+    "apps/frontend/rooms",
+    "apps/frontend/shell",
     "libs/auth",
     "libs/shared"
   ],
