@@ -13,13 +13,13 @@ function registerModule(module: { routes?: RouteRecordRaw[] }): void {
   }
 }
 
-import Core from "../../core/src/lib.js";
+import Core from "hotel-management-frontend-core";
 registerModule(Core);
 
-import Luggage from "../../luggage/src/lib.js";
+import Luggage from "hotel-management-frontend-luggage";
 registerModule(Luggage);
 
-import Rooms from "../../rooms/src/lib.js";
+import Rooms from "hotel-management-frontend-rooms";
 registerModule(Rooms);
 
 const router = createRouter({

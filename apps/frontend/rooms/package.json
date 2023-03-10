@@ -3,16 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "main": "./dist/lib.js",
-  "module": "./dist/lib.js",
-  "types": "./dist/lib.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/lib.js",
-      "import": "./dist/lib.js",
-      "types": "./dist/lib.d.ts"
-    }
-  },
+  "main": "./src/main.ts",
   "scripts": {
     "//dev": "run -T vite",
     "build": "run -T run-p type-check build-only type-gen",

@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "main": "./src/main.ts",
   "packageManager": "yarn@3.3.1",
   "scripts": {
     "build": "run -T tsc",
     "clean": "run -T rimraf ./dist",
-    "dev": "run -T run-p dev:tsc dev:node",
-    "dev:node": "node --watch ./dist/main.js",
-    "dev:tsc": "run -T tsc --watch --preserveWatchOutput"
+    "dev": "run -T tsx watch ./src/main.ts"
   },
   "dependencies": {
     "@picocss/pico": "1.5.6",

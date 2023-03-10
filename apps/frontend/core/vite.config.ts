@@ -8,7 +8,7 @@ import vue from "@vitejs/plugin-vue";
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "src", "lib.ts"),
+      entry: resolve(__dirname, "src", "main.ts"),
       name: "hotel-management-frontend-rooms",
       formats: ["es"],
       fileName: "lib",

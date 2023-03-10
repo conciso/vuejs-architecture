@@ -15,6 +15,9 @@
     "lint": "run -T eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "hotel-management-frontend-core": "workspace:apps/frontend/core",
+    "hotel-management-frontend-luggage": "workspace:apps/frontend/luggage",
+    "hotel-management-frontend-rooms": "workspace:apps/frontend/rooms",
     "hotel-management-shared": "workspace:libs/shared"
   }
 }
