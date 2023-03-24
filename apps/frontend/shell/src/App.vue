@@ -19,9 +19,7 @@ import { RouterLink, RouterView } from "vue-router";
       <RouterView />
 
       <template #fallback>
-        <div aria-busy="true">
-          Loading...
-        </div>
+        <div aria-busy="true">Loading...</div>
       </template>
     </Suspense>
   </main>

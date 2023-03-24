@@ -1,15 +1,20 @@
+require("@rushstack/eslint-patch/modern-module-resolution");
+
 /* eslint-env node */
 module.exports = {
   root: true,
-  parser: "@typescript-eslint/parser",
-  plugins: ["import", "@typescript-eslint", "prettier"],
+  parser: "vue-eslint-parser",
+  plugins: ["import", "prettier"],
   extends: [
+    "prettier",
     "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
+    "plugin:vue/vue3-essential",
+    // "plugin:@typescript-eslint/recommended",
+    "@vue/eslint-config-prettier",
+    "@vue/eslint-config-typescript",
   ],
   parserOptions: {
     ecmaVersion: "latest",
@@ -44,9 +49,9 @@ module.exports = {
       },
     ],
   },
-  overrides: [
-    {
-      files: ["**/*.{ts,vue}"],
-    },
-  ],
+  // overrides: [
+  //   {
+  //     files: ["**/*.{ts,vue}"],
+  //   },
+  // ],
 };

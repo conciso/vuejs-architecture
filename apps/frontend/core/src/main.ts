@@ -3,10 +3,4 @@ import { routes } from "./routes";
 import HotelList from "./components/HotelList.vue";
 import { useHotelsStore } from "./stores/hotels.js";
 
-export {
-  routes,
-  HotelList,
-  useHotelsStore
-};
-
-
+export { routes, HotelList, useHotelsStore };
