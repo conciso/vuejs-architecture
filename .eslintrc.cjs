@@ -12,6 +12,7 @@ module.exports = {
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:vue/vue3-essential",
+    // When this is active eslint complains.
     // "plugin:@typescript-eslint/recommended",
     "@vue/eslint-config-prettier",
     "@vue/eslint-config-typescript",
@@ -44,6 +45,12 @@ module.exports = {
             target: "apps/frontend/",
             from: "apps/backend/",
             message: "Frontend should not import from backend. Move code to libs and import from there instead.",
+          },
+
+          {
+            target: "apps/frontend/**/components/*",
+            from: "**/stores/*",
+            message: "Components should not import stores.",
           },
         ],
       },
