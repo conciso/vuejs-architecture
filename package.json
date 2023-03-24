@@ -21,7 +21,8 @@
     "lint": "eslint .",
     "lint:fix": "yarn lint --fix",
     "prettier": "prettier -c .",
-    "prettier:fix": "prettier -w"
+    "prettier:fix": "prettier -w",
+    "test:unit": "yarn workspaces foreach -v run test:unit"
   },
   "dependencies": {
     "pinia": "2.0.28",

@@ -32,6 +32,13 @@ module.exports = {
     // Fix annoying CRLF vs LF error.
     "linebreak-style": ["error", process.platform === "win32" ? "windows" : "unix"],
 
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        allowExpressions: true,
+      },
+    ],
+
     "import/no-restricted-paths": [
       "error",
       {
