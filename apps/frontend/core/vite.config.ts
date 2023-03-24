@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, "src", "main.ts"),
-      name: "hotel-management-frontend-rooms",
+      name: "hotel-management-frontend-core",
       formats: ["es"],
       fileName: "lib",
     },

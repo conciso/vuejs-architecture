@@ -13,7 +13,7 @@
     "test:e2e": "run -T playwright test",
     "build-only": "run -T vite build",
     "type-check": "run -T vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-    "type-gen": "run -T vue-tsc -p ./tsconfig.app.json --declaration --emitDeclarationOnly --rootDir ./src --outDir ./dist",
+    "type-gen": "run -T vue-tsc -p ./tsconfig.json --declaration --emitDeclarationOnly --rootDir ./src --outDir ./dist",
     "lint": "run -T eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
