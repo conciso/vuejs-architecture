@@ -3,6 +3,7 @@ import { ref } from "vue";
 import type { Hotel, Room } from "hotel-management-shared";
 import { HotelList, useHotelsStore } from "hotel-management-frontend-core";
 import { useRoomsStore } from "../stores/rooms.js";
+import RoomList from "../components/RoomList.vue";
 
 const loading = ref(true);
 
@@ -25,11 +26,7 @@ loading.value = false;
       <template #hotel="{ hotel }">
         <li class="hotel">
           <h3 class="hotel-name">{{ hotel.name }}</h3>
-          <ul>
-            <li class="room" v-for="room of rooms[hotel.id]" :key="room.id">
-              <h4>{{ room.name }}</h4>
-            </li>
-          </ul>
+          <RoomList :rooms="rooms[hotel.id]" />
         </li>
       </template>
     </HotelList>
