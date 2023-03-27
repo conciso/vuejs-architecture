@@ -1,20 +1,18 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import type { Hotel, Room } from "hotel-management-shared";
 import { HotelList, useHotelsStore } from "hotel-management-frontend-core";
-import { useRoomsStore } from "../stores/rooms.js";
+import { useRoomsStore } from "../stores/RoomsStore.js";
 import RoomList from "../components/RoomList.vue";
 
 const loading = ref(true);
 
-const hotelsStore = useHotelsStore();
-const hotels = await hotelsStore.fetchHotels();
+const { load: loadHotels, hotels } = useHotelsStore();
+await loadHotels();
 
-const roomsStore = useRoomsStore();
-const rooms: Record<Hotel["id"], Room[]> = {};
+const { loadRoomsForHotel, rooms } = useRoomsStore();
 
 for (const hotel of hotels) {
-  rooms[hotel.id] = await roomsStore.fetchRoomsForHotel(hotel.id);
+  await loadRoomsForHotel(hotel.id);
 }
 
 loading.value = false;

@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import HotelList from "../components/HotelList.vue";
-import { useHotelsStore } from "../stores/hotels.js";
+import { useHotelsStore } from "../stores/HotelsStore.js";
 
-const { fetchHotels } = useHotelsStore();
-const hotels = ref(await fetchHotels());
+const { load, isLoading, hotels } = useHotelsStore();
+await load();
 </script>
 
 <template>
   <main>
-    <HotelList :hotels="hotels" />
+    <HotelList :aria-busy="isLoading" :hotels="hotels" />
   </main>
 </template>
